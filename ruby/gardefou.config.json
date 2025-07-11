@@ -1,0 +1,4 @@
+{
+  "quota": 100,
+  "rate_limit": "10/min"
+}
