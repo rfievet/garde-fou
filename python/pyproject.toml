@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "garde-fou"
+version = "0.1.1"
+description = "Protective wrappers around paid API clients with quotas & duplicate detection"
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+authors = [{ name = "Robin Fiévet" }]
+dependencies = [
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7.0",
+  "pytest-asyncio>=0.20",
+]
+
+[project.urls]
+"Source" = "https://github.com/rfievet/garde-fou"
+
+
+[tool.setuptools]
+# Use src layout
+
+[tool.setuptools.packages.find]
+where = ["src"]

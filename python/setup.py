@@ -1,5 +1,5 @@
-# Setup script for the gardefou Python package
+#!/usr/bin/env python
+import setuptools
 
-from setuptools import setup, find_packages
-
-setup(name="gardefou", packages=find_packages("src"), package_dir={"": "src"})
+if __name__ == "__main__":
+    setuptools.setup()
