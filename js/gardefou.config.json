@@ -1,0 +1,5 @@
+{
+  "max_calls": 100,
+  "on_violation_max_calls": "warn",
+  "on_violation_duplicate_call": "warn"
+}
