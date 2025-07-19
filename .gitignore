@@ -1,0 +1,9 @@
+
+# Python build artifacts
+*.egg-info/
+build/
+dist/
+
+# IDE
+.vscode/
+
