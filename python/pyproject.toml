@@ -7,9 +7,21 @@ name = "garde-fou"
 version = "0.1.1"
 description = "Protective wrappers around paid API clients with quotas & duplicate detection"
 readme = "README.md"
-requires-python = ">=3.7"
-license = { file = "LICENSE" }
-authors = [{ name = "Robin Fiévet" }]
+requires-python = ">=3.8"
+license = "MIT"
+authors = [{ name = "Robin Fiévet", email = "robinfievet@gmail.com" }]
+keywords = ["api", "rate-limiting", "quota", "protection", "wrapper"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
 dependencies = [
   "PyYAML>=6.0",
 ]
@@ -21,7 +33,10 @@ test = [
 ]
 
 [project.urls]
+"Homepage" = "https://github.com/rfievet/garde-fou"
 "Source" = "https://github.com/rfievet/garde-fou"
+"Bug Reports" = "https://github.com/rfievet/garde-fou/issues"
+"Changelog" = "https://github.com/rfievet/garde-fou/blob/main/python/CHANGELOG.md"
 
 
 [tool.setuptools]
