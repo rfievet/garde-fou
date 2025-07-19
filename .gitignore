@@ -4,6 +4,11 @@
 build/
 dist/
 
+# Environment variables
+.env
+*.env
+!.env.example
+
 # IDE
 .vscode/
 
