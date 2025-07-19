@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.9] - 2025-07-19
+
+### Changed
+- Version bump from 0.1.8 to 0.1.9
+
+
 ## [0.1.8] - 2025-07-19
 
 ### Changed
@@ -66,7 +72,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - API documentation and configuration options
 - Quick start guide
 
-[Unreleased]: https://github.com/rfievet/garde-fou/compare/v0.1.8...HEAD
+[Unreleased]: https://github.com/rfievet/garde-fou/compare/v0.1.9...HEAD
+[0.1.9]: https://github.com/rfievet/garde-fou/releases/tag/v0.1.9
 [0.1.8]: https://github.com/rfievet/garde-fou/releases/tag/v0.1.8
 [0.1.7]: https://github.com/rfievet/garde-fou/releases/tag/v0.1.7
 [0.1.6]: https://github.com/rfievet/garde-fou/releases/tag/v0.1.6
