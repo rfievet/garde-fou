@@ -17,7 +17,9 @@ def load_env():
                 line = line.strip()
                 if line and not line.startswith('#') and '=' in line:
                     key, value = line.split('=', 1)
-                    os.environ[key.strip()] = value.strip()
+                    # Remove quotes if present
+                    value = value.strip().strip('"').strip("'")
+                    os.environ[key.strip()] = value
         print("✅ Loaded API tokens from .env file")
         return True
     else:
