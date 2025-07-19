@@ -8,7 +8,6 @@ def expensive_api_call(query, model="gpt-4"):
     """Simulate an expensive API call."""
     print(f"Making API call with query: '{query}' using model: {model}")
     return f"API response for: {query}"
-
 def main():
     print("=== GardeFou Example Usage ===\n")
     
