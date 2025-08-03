@@ -1,4 +1,5 @@
 {
-  "quota": 100,
-  "rate_limit": "10/min"
+  "max_calls": 100,
+  "on_violation_max_calls": "warn",
+  "on_violation_duplicate_call": "warn"
 }

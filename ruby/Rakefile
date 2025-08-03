@@ -1,0 +1,39 @@
+require 'bundler/gem_tasks'
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new(:spec)
+
+task default: :spec
+
+desc 'Run the example'
+task :example do
+  ruby 'examples/example_usage.rb'
+end
+
+desc 'Run RuboCop'
+task :rubocop do
+  sh 'rubocop'
+end
+
+desc 'Run all checks'
+task check: %i[spec rubocop]
+
+desc 'Release gem (patch version)'
+task :release do
+  ruby 'scripts/release.rb patch'
+end
+
+desc 'Release gem (minor version)'
+task 'release:minor' do
+  ruby 'scripts/release.rb minor'
+end
+
+desc 'Release gem (major version)'
+task 'release:major' do
+  ruby 'scripts/release.rb major'
+end
+
+desc 'Dry run release'
+task 'release:dry' do
+  ruby 'scripts/release.rb patch --dry-run'
+end
