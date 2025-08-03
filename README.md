@@ -36,24 +36,51 @@ npm install garde-fou
 ```typescript
 import { GardeFou } from 'garde-fou';
 
-const guard = new GardeFou({ max_calls: 5, on_violation_max_calls: 'warn' });
-const result = guard.call(yourApiFunction, "your", "arguments");
+const guard = GardeFou({ max_calls: 5, on_violation_max_calls: 'warn' });
+
+// Two equivalent calling patterns:
+// 1. Direct call (Python-like syntax)
+const result = guard(yourApiFunction, "your", "arguments");
+
+// 2. Explicit method call
+const result2 = guard.call(yourApiFunction, "your", "arguments");
 
 // For async functions
 const asyncResult = await guard.callAsync(yourAsyncApiFunction, "args");
+```
+
+### Ruby
+```bash
+gem install garde_fou
+```
+
+```ruby
+require 'gardefou'
+
+guard = Gardefou::GardeFou.new(max_calls: 5, on_violation_max_calls: 'warn')
+
+# Three equivalent calling patterns:
+# 1. Method call
+result = guard.call(your_api_method, "your", "arguments")
+
+# 2. Bracket syntax (Ruby callable style)
+result = guard[your_api_method, "your", "arguments"]
+
+# 3. Protect method (semantic)
+result = guard.protect(your_api_method, "your", "arguments")
 ```
 
 ## Repository Layout
 
 - **[python/](python/)** – ✅ **Ready!** Full Python package published to PyPI
 - **[js/](js/)** – ✅ **Ready!** TypeScript/JavaScript package with full type support
-- **[ruby/](ruby/)** – 🚧 Ruby gem (in development)
+- **[ruby/](ruby/)** – ✅ **Ready!** Ruby gem with multiple calling patterns and mixin support
 
 ## Status
 
 - **Python**: ✅ Complete and published to PyPI
 - **JavaScript/TypeScript**: ✅ Complete with TypeScript support and comprehensive test suite
-- **Ruby**: 🚧 Planned
+- **Ruby**: ✅ Complete with Ruby-idiomatic API and comprehensive RSpec test suite
 
 ## Contributing
 

@@ -2,6 +2,8 @@
  * Type definitions for garde-fou
  */
 
+import { Profile } from './profile';
+
 export type ViolationHandler = 'warn' | 'raise' | ((profile: any) => void);
 
 export interface ProfileConfig {
@@ -12,3 +14,11 @@ export interface ProfileConfig {
 }
 
 export type ConfigSource = string | ProfileConfig;
+
+// Type for the callable guard function
+export interface GuardFunction {
+  <T extends (...args: any[]) => any>(fn: T, ...args: Parameters<T>): ReturnType<T>;
+  callAsync<T extends (...args: any[]) => Promise<any>>(fn: T, ...args: Parameters<T>): Promise<Awaited<ReturnType<T>>>;
+  call<T extends (...args: any[]) => any>(fn: T, ...args: Parameters<T>): ReturnType<T>;
+  profile: Profile;
+}
